@@ -1,31 +1,27 @@
-# BIIF-Spatial Omics Workshop 
-## Nov 10, 2022: focus on QuPath and TissUUmaps
-Trainers: Fredrik Nysjö, Christophe Avenel, Anna Klemm, Andrea Behanova & Carolina Wählby
-
-The workshop will consist of short introductory lectures and hands-on work on the participant’s own computers. We envision 10-15 participants, working on their own or in pairs. 
+# Cell segmentation, Classification and Spatial Analysis in Multiplexed Fluorescence Microscopy Image Data.
+## Focus on Microscopy 2023
+## April 2, 2023
+Trainer: Anna Klemm, BioImage Informatics Facility, SciLifeLab, Sweden  
+Authors:  
+License:  
 
 ## Schedule
-*Big, Alfa 3 (9.30-14.00)*
+*April 2, 10:30 AM - 12:45 PM (2h 15min), Tutorial 1, Infante hall*
 
-**9.30-9.45** Intro and ‘pre-flight-software check’, installation of plugins (all)  
-**9.45-10.15** QuPath intro and overview (Anna)
+**10.30-10.50** Presentation: Overview of Multiplexed Fluorescence Image Analysis 
 
-**10.15-10.30** Coffee break
+**10.50-11.00** Intorduction to the material  
 
-**10.30-11.15** [Cell segmentation with StarDist in QuPath and feature extraction](part1_qupath/README.md#creating-a-new-qupath-project) (Fredrik)  
-**11.15-12.00** [Intro to semi-automated cell classification and data export for TissUUmaps](part1_qupath/README.md#cell-classification) (Anna and Fredrik)
+**11.00-11.15** Demo: Creating a QuPath project, import images and inspect them, manual annotation of the tissue core, cell detection  
 
-**12.00-13.00** Lunch
+**11.15-11.45** [Intro to semi-automated cell classification and data export for TissUUmaps](part1_qupath/README.md#cell-classification)  
 
-**13.00-13.30** [Intro to TissUUmaps](part2_tissuumaps/TissUUmaps_overview.pdf) (Christophe)  
-**13.30-14.00** [Viewing QuPath output in TissUUmaps, and QC](part2_tissuumaps/1_QuPath_output_in_TissUUmaps.md) (Andrea)
+**11.45-12.00** Slides/Demo: Strategies for training cell classifiers  
 
-Break to move to Gamma 7 (14.00-17.00) (Exact room will be announced)
+**12.00-12.15** Demo: using pixel classification to detect vessels  
 
-**14.15-14.45** [Load and look at MALDI data in TissUUmaps](part2_tissuumaps/2_MALDI_data_in_TissUUmaps.md) (Christophe)  
-**14.45-15.15** [Load and look at In Situ Sequencing data in TissUUmaps](part2_tissuumaps/3_ISS_data_in_TissUUmaps.md) (Fredrik and Christophe)  
-**15.15-15.45** Demo of data registration in TissUUmaps (Christophe)
+**12.15-12:30** Demo: spatial measures in QuPath  
 
-**15.45-16.00** Coffee break
+**12.30-12:45** final remarks, outlook  
 
-**16.00-17.00** Wrap up - wishes for the future: gaps, tools + further workshop ideas (Carolina)
+
