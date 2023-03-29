@@ -12,7 +12,7 @@ By Fredrik Nysjö
 
 Go to `Menu->File->Project->Create project`. This will ask you to create a new folder for the project, where any non-image data (annotations, trained classifiers, detections, etc.) will be stored.
 
-For the new project, in the `Project` tab in the left panel, click on `Add images` and select the two .tif images from Dataset 1. You can also just drag-and-drop the images onto the QuPath window. Afterward, the project with the two images should look like this:
+For the new project, in the `Project` tab in the left panel, click on `Add images` and select the two .tif images from Dataset 1. You can also just drag-and-drop the images onto the QuPath window. Under `Set image type` select `Fluorescence`. Afterward, the project with the two images should look like this:
 
 ![](images/screenshot_project.png?raw=true "Screenshot")
 
@@ -58,17 +58,12 @@ To segment the cells in the image, switch back to the DAPI channel, and make sur
 
 ![](images/screenshot_cell_seg2.png?raw=true "Screenshot")
 
-### Using the StarDist QuPath extension (optional)
-
-TODO
-
-Note: if you did not install the StarDist extension prior to creating your project, you need to save the project (`Menu->File->Save`), install the extension (by downloading it from [here](https://github.com/qupath/qupath-extension-stardist/releases) and then dragging-and-dropping the .jar file over the QuPath window), and then restart QuPath.
 
 ## Cell classification
 
 ### Training an object classifier
 
-According to the signature matrix (see the file `signature_matrix.png` included in the dataset), the Glioma cell type should be expressed in the Opal 650 (mutIDH1) channel. To create a classifier for this cell type, first go to the `Annotations` tab in the left panel, and remove the existing default classes. Then add two new classes, one called Glioma and the other Not-Glioma, that should indicate if a cell is positive or negative for the cell type.
+According to the signature matrix (see the file `signature_matrix.png` included in the dataset), the Glioma cell type should express mutIDH1, visible in the Opal 650 channel. To create a classifier for this cell type, first go to the `Annotations` tab in the left panel, and remove the existing default classes. Then add two new classes, one called Glioma and the other Not-Glioma, that should indicate if a cell is positive or negative for the cell type.
 
 ![](images/screenshot_classes1.png?raw=true "Screenshot")
 
@@ -92,9 +87,9 @@ The last step is to now train a new classifier. Go to `Menu->Classify->Object cl
 
 ### Training multiple object classifiers
 
-After training the Glioma classifier in the previous step, you should now create and train a second classifier for a different cell type. According to the signature matrix, the Oligodendrocyte cell type should be expressed in the Opal 620 (MBP) channel. Make two new classes named Oligo and Not-Oligo, and repeat the steps of creating annotation points for training for each class. Now train a classifier for the new cell type on the Opal 620 feature measurements.
+After training the Glioma classifier in the previous step, you should now create and train a second classifier for a different cell type. According to the signature matrix, the Macrophages are characterized by the expression of IBA1 (Opal 480). Make two new classes named Macrophage and Not-Macrophage, and repeat the steps of creating annotation points for training for each class. Now train a classifier for the new cell type on the Opal 480 feature measurements.
 
-Apply the new classifier on the cells. Note how this will overwrite the previous Glioma/Not-Glioma classification! To combine multiple classifiers in QuPath, go to `Menu->Classify->Object classification->Load object classifier`, then select (using `Ctrl+Left click`) both classifiers in the list and click `Apply classifier sequentially`. Each cell should now be assigned both a Glioma/Not-Glioma class and an Oligo/Not-Oligo class.
+Apply the new classifier on the cells. Note how this will overwrite the previous Glioma/Not-Glioma classification! To combine multiple classifiers in QuPath, go to `Menu->Classify->Object classification->Load object classifier`, then select (using `Ctrl+Left click`) both classifiers in the list and click `Apply classifier sequentially`. Each cell should now be assigned both a Glioma/Not-Glioma class and Macrophage/Not-Macrophage class.
 
 ![](images/screenshot_multiclass1.png?raw=true "Screenshot")
 
