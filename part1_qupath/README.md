@@ -89,13 +89,36 @@ The last step is to now train a new classifier. Go to `Menu->Classify->Object cl
 
 After training the Glioma classifier in the previous step, you should now create and train a second classifier for a different cell type. According to the signature matrix, the macrophages are characterized by the expression of IBA1 (Opal 480). We can classify cells expressing IBA1 in a class called TAMM (tumor-associated macrophages and microglia). Make two new classes named TAMM and Not-TAMM, and repeat the steps of creating annotation points for training for each class. Now train a classifier for the new cell type on the Opal 480 (IBA1) feature measurements.
 
-Apply the new classifier on the cells. Note how this will overwrite the previous Glioma/Not-Glioma classification! To combine multiple classifiers in QuPath, go to `Menu->Classify->Object classification->Load object classifier`, then select (using `Ctrl+Left click`) both classifiers in the list and click `Apply classifier sequentially`. Each cell should now be assigned both a Glioma/Not-Glioma class and TAMM/Not-TAMM class.
-
+Apply the new classifier on the cells. Note how this will overwrite the previous Glioma/Not-Glioma classification! To combine multiple classifiers in QuPath, go to `Menu->Classify->Object classification->Load object classifier`, then select (using `Ctrl+Left click`) both classifiers in the list and click `Apply classifier sequentially`. Each cell should now be assigned both a Glioma/Not-Glioma class and TAMM/Not-TAMM class. In`Annotations` tab in the left panel, press the three dots next to `Auto set`, choose `Populate from existing objects > All classes (including subclasses)`. You can change the class color by double-clicking on a class.
+![](images/screenshot_list_classes.png?raw=true "Screenshot")
 ![](images/screenshot_multiclass2.png?raw=true "Screenshot")
 
 ### Applying a trained classifier on a different image
 
-In the `Project` tab in the left panel, open the second image (the one you did not use for training) for the project. Repeat the steps above for core annotation and cell segmentation, and then try each of the trained classifiers on the cells in this image and compare with the results you got on the first image.
+In the `Project` tab in the left panel, open the second image (the one you did not use for training) for the project. Repeat the steps above for core annotation and cell segmentation, and then try each of the trained classifiers on the cells in this image and compare with the results you got on the first image. If the classifier does not fit the second image, reset the cell classes with `Classify > Object classsification > Reset detection classifications` and create a new classifier following the instructions above (#training-an-object-classifier). Save the classifier using a new name, e.g. Glioma_7_1_E.
+
+## Strategies for creating classifiers
+Aim: we want to build a classifier trained on the cell objects of several cores. With this we aim for a more generalizable classifier.
+We will exemplify this for the TAMM/not-TAMM classifier.
+* open the first image in the project
+* `Classify -> Object classification -> Load object classifier`: apply the classifier created on the 5_10_B image (TAMM_5_10_B). The objects now contain only the information whether they are TAMM/not-TAMM
+* open the point tool and press `Convert detections to points`. Don't deelte the detection after converting to points.
+* Save the changees
+* activate  the second image 7_1_E and repeat the steps for this image.
+
+We now have two images with several thousands of annotations for training a combined TAMM/not-TAMM classifier. For this:
+* go to `Menu->Classify->Object classification->Train object classifier` 
+* as before select the features (all intensity measurements on `480`) and classes (TAMM/not-TAMM)
+* within the `Train object classifier` GUI press `Load training` and select both images, then `Apply`.
+* Save the classifier under the name `TAMM_combined`.
+
+![](images/screenshot_train_loadTraining.png?raw=true "Screenshot")
+
+### Visual inspection of the classifier results
+* go to image 5_10_B
+* load - one by one - the three classifiers: the classifier you originally created (TAMM_5_10_B), the classifier adjusted to the second image (TAMM_7_1_E) and the combined classifier. How do the three classifiers compare?
+
+Note: This visual inspection is only to get a first impression. Quantitatively, the adjusted classifier could be taken as the ground truth (eventually after manually correcting the classes of single, misclassified cells) for the image and quantitative measures like accuracy, precision, and a confusion matrix can be generated to better compare the combined classifier. Consider also that different experts in most cases will not agree 100% on the "correct" class of a cell and that the ground truth is dependend on the person annotating the data set.
 
 ## Exporting results
 
