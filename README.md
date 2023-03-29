@@ -12,7 +12,7 @@ License:
 
 **10.50-11.00** Intorduction to the material  
 
-**11.00-11.15** Demo: Creating a QuPath project, import images and inspect them, manual annotation of the tissue core, cell detection  
+**11.00-11.15** Demo: Creating a QuPath project, import images and inspect them, manual annotation of the tissue core, cell detection.[Instructions](https://github.com/BIIFSweden/FOM_Multiplexed/blob/main/part1_qupath/README.md).
 
 **11.15-11.45** [Intro to semi-automated cell classification and data export for TissUUmaps](part1_qupath/README.md#cell-classification)  
 
