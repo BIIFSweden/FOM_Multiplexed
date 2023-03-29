@@ -87,21 +87,15 @@ The last step is to now train a new classifier. Go to `Menu->Classify->Object cl
 
 ### Training multiple object classifiers
 
-After training the Glioma classifier in the previous step, you should now create and train a second classifier for a different cell type. According to the signature matrix, the Macrophages are characterized by the expression of IBA1 (Opal 480). Make two new classes named Macrophage and Not-Macrophage, and repeat the steps of creating annotation points for training for each class. Now train a classifier for the new cell type on the Opal 480 feature measurements.
+After training the Glioma classifier in the previous step, you should now create and train a second classifier for a different cell type. According to the signature matrix, the macrophages are characterized by the expression of IBA1 (Opal 480). We can classify cells expressing IBA1 in a class called TAMM (tumor-associated macrophages and microglia). Make two new classes named TAMM and Not-TAMM, and repeat the steps of creating annotation points for training for each class. Now train a classifier for the new cell type on the Opal 480 (IBA1) feature measurements.
 
-Apply the new classifier on the cells. Note how this will overwrite the previous Glioma/Not-Glioma classification! To combine multiple classifiers in QuPath, go to `Menu->Classify->Object classification->Load object classifier`, then select (using `Ctrl+Left click`) both classifiers in the list and click `Apply classifier sequentially`. Each cell should now be assigned both a Glioma/Not-Glioma class and Macrophage/Not-Macrophage class.
-
-![](images/screenshot_multiclass1.png?raw=true "Screenshot")
+Apply the new classifier on the cells. Note how this will overwrite the previous Glioma/Not-Glioma classification! To combine multiple classifiers in QuPath, go to `Menu->Classify->Object classification->Load object classifier`, then select (using `Ctrl+Left click`) both classifiers in the list and click `Apply classifier sequentially`. Each cell should now be assigned both a Glioma/Not-Glioma class and TAMM/Not-TAMM class.
 
 ![](images/screenshot_multiclass2.png?raw=true "Screenshot")
 
 ### Applying a trained classifier on a different image
 
 In the `Project` tab in the left panel, open the second image (the one you did not use for training) for the project. Repeat the steps above for core annotation and cell segmentation, and then try each of the trained classifiers on the cells in this image and compare with the results you got on the first image.
-
-### Feature normalization (optional)
-
-TODO
 
 ## Exporting results
 
