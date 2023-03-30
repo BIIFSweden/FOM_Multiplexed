@@ -51,6 +51,7 @@ For demonstration purposes we just generate a very simple classifier based on on
 ![](img/screenshot_createObjects.png?raw=true "Screenshot")
 
 Result:
+
 ![](img/screenshot_pixelclassifier_result.png?raw=true "Screenshot")
 
 
