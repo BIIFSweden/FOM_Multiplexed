@@ -1,12 +1,34 @@
 # QuPath instructions for workshop
 
-By Fredrik Nysjö
+By Fredrik Nysjö, Anna Klemm
 
 ## Data
 
-- Folder: `dataset_1_tma_cores/`
 - Images: `LGG TMA 5_2_Core[1,10,B]...data.tif` and `LGG TMA 7_2_Core[1,1,E]...data.tif`
 - Signature matrix: `signature_matrix.png`
+
+The example data are samples from lower grade glioma tumor patients ("tumor cores"). 
+| Channel | Stain | Marker |  Main Cell Type |
+|--------|:--------:|:--------:|:--------:|
+| 1 | DAPI |  Nuclei | all |
+| 2 | Opal 480 |    IBA1   | macrophages |
+| 3 | Opal 520 | Ki67 | dividing cells |
+| 4 | Opal 540 |    TMEM119   | microglia |
+| 5 | Opal 570 | NeuroC | neurons |
+| 6 | Opal 620 |    MBP   | (oligodendrocyte)|
+| 7 | Opal 650 | mutIDH1 | glioma |
+| 8 | Opal 690 |    CD34   | endothelial |
+| 9 | Opal 780 | GFAP | astrocyte |
+| 10 | Autofluorescence |    -   |    -   |
+
+
+All procedures involving human specimens were 
+approved by the regional ethical committee in Gothenburg (Ep Dnr: 1067–16), and informed consent was given by the patients. You can read more about the samples and the staining procedure in Solorzano *et al.*. 
+
+**Literature:**  
+Solorzano L, Wik L, Olsson Bontell T, Wang Y, Klemm AH, Öfverstedt J, Jakola AS, Östman A, Wählby C. (2021)  
+Machine learning for cell classification and neighborhood analysis in glioma tissue.   
+[Cytometry A. 99(12), 1176-1186. doi: 10.1002/cyto.a.24467](https://onlinelibrary.wiley.com/doi/10.1002/cyto.a.24467)
 
 ## Creating a new QuPath project
 
