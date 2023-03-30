@@ -54,4 +54,16 @@ Result:
 
 ![](img/screenshot_pixelclassifier_result.png?raw=true "Screenshot")
 
+# Spatial Analysis
+We now want to analysis the distance of tumor-associated macrophages to the next blood vessel.
 
+### Cell Detection and Classification
+* make sure to select the annotation of the entire core
+* `Analyze->Cell detection->Cell detection`: use a `Threshold : 0.5`and `Cell epansion : 2.5µm`
+* open `Classify -> Object classification -> Load object classifier`
+* Apply the classifier `TAMM_combined`
+
+### Adding Spatial Features
+* run  `Analyze->Spatial analysis->Distance to annotations 2D`
+* `Split multi-part classifications : no`
+* 
