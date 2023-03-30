@@ -2,7 +2,7 @@
 ## Focus on Microscopy 2023
 ## April 2, 2023
 Trainer: Anna Klemm, BioImage Informatics Facility, SciLifeLab, Sweden  
-Authors:  
+Authors: Fredrik Nysjö, Anna Klemm, BioImage Informatics Facility, SciLifeLab, Sweden
 License:  
 
 ## Schedule
@@ -12,16 +12,16 @@ License:
 
 **10.50-11.00** Intorduction to the material  
 
-**11.00-11.15** Demo: Creating a QuPath project, import images and inspect them, manual annotation of the tissue core, cell detection.[Instructions](https://github.com/BIIFSweden/FOM_Multiplexed/blob/main/part1_qupath/README.md).
+**11.00-11.15** [Creating a QuPath project, import images and inspect them, manual annotation of the tissue core, cell detection](multiplexed_celldetection_cellclassification.md)
 
-**11.15-11.45** [Intro to semi-automated cell classification and data export for TissUUmaps](part1_qupath/README.md#cell-classification)  
+**11.15-11.45** [Intro to semi-automated cell classification and data export for TissUUmaps](multiplexed_celldetection_cellclassification.md#cell-classification)  
 
-**11.45-12.00** Slides/Demo: Strategies for training cell classifiers  
+**11.45-12.00** Strategies for training cell classifiers 
 
-**12.00-12.15** Demo: using pixel classification to detect vessels  
+**12.00-12.15** [Using pixel classification to detect vessels](pixelclassification.md)  
 
-**12.15-12:30** Demo: spatial measures in QuPath  
+**12.15-12:30** [Spatial analysis in QuPath](pixelclassification.md#spatial-analysis)
 
-**12.30-12:45** final remarks, outlook  
+**12.30-12:45** Final remarks, outlook  
 
 
