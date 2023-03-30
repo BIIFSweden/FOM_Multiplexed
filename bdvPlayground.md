@@ -54,7 +54,7 @@ A more detailled description on how to enable an update site can be found here: 
 * Add the files to inspect, e.g. by using `Add folder content...` to add all images in a folder.
 * Press `OK`.  
 
-![](img/Screenshot_bdvpg_OpenBridge.png?raw=true "Screenshot")
+![](img_bdv/Screenshot_bdvpg_OpenBridge.png?raw=true "Screenshot")
 
 
 ## Navigation to single images ('sources').
@@ -67,7 +67,7 @@ Let's try this out:
 The Opal 480 channel of the first image core is loaded into the BigDataViewer.
 Close the window again, since this was just a first test.
 
-![](img/Screenshot_bdv_single_channel.png?raw=true "Screenshot")
+![](img_bdv/Screenshot_bdv_single_channel.png?raw=true "Screenshot")
 
 ## Displaying several core images in a grid
 Our aim is to visualize all the core images in a grid, visualizing one single channel for inspection. Once displayed on a grid, we can visually compare e.g. staining intensities, artefacts etc.. between the individual tumor cores.
@@ -77,7 +77,7 @@ Steps:
 * Let's choose `NColumns = 5` to display the 20 images in a 4x5 grid. 
 * Press `OK`.
 
-![](img/Screenshot_bdvpg_DisplaySourcesOnGrid.png?raw=true "Screenshot")
+![](img_bdv/Screenshot_bdvpg_DisplaySourcesOnGrid.png?raw=true "Screenshot")
 
 ## Adjustments and Navigation within the BDV
 Please have a look on the BDV documentation to learn about navigation and displaying data: https://imagej.net/plugins/bdv/
@@ -93,7 +93,7 @@ Basic Navigation:
 * pan while holding the right click
 * zoom: hold `CTRL+SHIFT` while zooming with the mouse wheel.
 
-![](img/BDV_navigation.gif?raw=true "Screenshot")
+![](img_bdv/BDV_navigation.gif?raw=true "Screenshot")
 
 ## Acknowledgements
 We thank Nicolas Chiaruttini, EPFL, Lausanne, Switzerland, for tipps in using the BDV-Playground for this dataset.
