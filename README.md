@@ -20,7 +20,7 @@ License:
 
 **12.00-12.15** [Using pixel classification to detect vessels](pixelclassification.md)  
 
-**12.15-12:30** [Spatial analysis in QuPath](pixelclassification.md#spatial-analysis)
+**12.15-12:30** [Spatial analysis in QuPath](pixelclassification.md#spatial-analysis.md)
 
 **12.30-12:45** Final remarks, outlook  
 
