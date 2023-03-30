@@ -32,4 +32,6 @@ Strategies for training cell classifiers
 **12.30-12:45**  
 Final remarks, outlook  
 
+Extra material: [Inspecting multiple tissue cores using the BigDataViewer and BigDataViewer Playground in Fiji](bdvPlayground.md)
+
 
