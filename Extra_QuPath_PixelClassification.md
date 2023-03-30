@@ -14,13 +14,22 @@ Important channels for this exercise
 
 ![](img/screenshot_pixelclassification.png?raw=true "Screenshot")
 
+
+## Cell Detection and Classification
+We start as before with drawing an annotation of the tissue, then detect and classify cells.
+* start by drawing an annotation for the tissue area.
+* select the annotation
+* `Analyze->Cell detection->Cell detection`: use a `Threshold : 0.5`and `Cell epansion : 2.5µm`
+* open `Classify -> Object classification -> Load object classifier`
+* Apply the classifier `TAMM_combined`
+
 ## Vessel detection
 In this example we will create selections for the blood vessels based on a single marker (Opal690/CD34).  
 `Classify -> Pixel classification -> Create thresholder` could be used as well and is demonstrated [here](https://www.youtube.com/watch?v=WTAgXpuuqNY&t=1443s).  
 Instead here we are using `Classify -> Pixel classification -> Train pixel classifier`. Knowing how to train a classifier is very useful in case of more complex structures that are characterized e.g. by a combination of marker channels or by a defined texture.
 
 ### Training a pixel classifier
-* Start by drawing an annotation for the tissue area.
+
 * in the `Annotations` tab, on the three dots add a class and call it 'Vessel' 
 * using the brush tool, draw small areas above pixels belonging to vessels (Opal690 positive).
 * right-click on the annotation to set the class to 'Vessel'
@@ -46,7 +55,7 @@ For demonstration purposes we just generate a very simple classifier based on on
 * open `Classify -> Pixel classification -> Load pixel classifier`
 * Load 'vessel_pixel_5_10_I'
 * press `Create objects` choosing `Current selection`
-* For the parameters of the `Create objects` command, please follow the screenshot below. We want to create annotations for single vessel objects (= `split objects`) and exclude those particles that might be positive for the CD34-marker, but too small to be considered a vessel (=`Minimum object size`).
+* For the parameters of the `Create objects` command, please follow the screenshot below. We want to create annotations for single vessel objects (= `split objects`) and exclude those particles that might be positive for the CD34-marker, but too small to be considered a vessel (=`Minimum object size`). We also don't want to delete the cell detection that we have created before (= unticked `Delete existing objects`).
 
 ![](img/screenshot_createObjects.png?raw=true "Screenshot")
 
@@ -55,15 +64,12 @@ Result:
 ![](img/screenshot_pixelclassifier_result.png?raw=true "Screenshot")
 
 # Spatial Analysis
-We now want to analysis the distance of tumor-associated macrophages to the next blood vessel.
+We now want to analyse the distance of tumor-associated macrophages (class *TAMM*) to the next blood vessel.
 
-### Cell Detection and Classification
-* make sure to select the annotation of the entire core
-* `Analyze->Cell detection->Cell detection`: use a `Threshold : 0.5`and `Cell epansion : 2.5µm`
-* open `Classify -> Object classification -> Load object classifier`
-* Apply the classifier `TAMM_combined`
 
 ### Adding Spatial Features
 * run  `Analyze->Spatial analysis->Distance to annotations 2D`
 * `Split multi-part classifications : no`
-* 
+
+For each cell we now get the distance in µm to the closest vessel annotation.
+
