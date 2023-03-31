@@ -21,11 +21,11 @@ We start as before with drawing an annotation of the tissue, then detect and cla
 * select the annotation
 * `Analyze->Cell detection->Cell detection`: use a `Threshold : 0.5`and `Cell epansion : 2.5µm`
 * open `Classify -> Object classification -> Load object classifier`
-* Apply the classifier `TAMM_combined`
+* Apply the classifier `TAMM_combined` generated in the [previous exercise](multiplexed_celldetection_cellclassification.md#strategies-for-creating-classifiers)
 
 ## Vessel detection
 In this example we will create selections for the blood vessels based on a single marker (Opal690/CD34).  
-`Classify -> Pixel classification -> Create thresholder` could be used as well and is demonstrated [here](https://www.youtube.com/watch?v=WTAgXpuuqNY&t=1443s).  
+`Classify -> Pixel classification -> Create thresholder` could be used as well and is demonstrated in this [YouTube video](https://www.youtube.com/watch?v=WTAgXpuuqNY&t=1443s).  
 Instead here we are using `Classify -> Pixel classification -> Train pixel classifier`. Knowing how to train a classifier is very useful in case of more complex structures that are characterized e.g. by a combination of marker channels or by a defined texture.
 
 ### Training a pixel classifier
@@ -47,7 +47,7 @@ For demonstration purposes we just generate a very simple classifier based on on
 * save the classifier under the name 'vessel_pixel_5_10_I'
 
 ![](img/screenshot_pixelclassifier.png?raw=true "Screenshot")
-![](img/screenshot_features.1.png?raw=true "Screenshot")
+![](img/screenshot_features.png?raw=true "Screenshot")
 
 
 #### Loading the pixel classifier
@@ -71,5 +71,5 @@ We now want to analyse the distance of tumor-associated macrophages (class *TAMM
 * run  `Analyze->Spatial analysis->Distance to annotations 2D`
 * `Split multi-part classifications : no`
 
-For each cell we now get the distance in µm to the closest vessel annotation.
+For each cell we now get the distance in µm to the closest vessel annotation. In the measurement table these will be listed in an additional column.
 
