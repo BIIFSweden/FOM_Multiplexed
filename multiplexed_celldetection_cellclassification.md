@@ -123,11 +123,13 @@ In the `Project` tab in the left panel, open the second image (the one you did n
 ## Strategies for creating classifiers
 Aim: we now want to build a classifier trained on the cell objects of several cores. With this we aim for a more generalizable classifier.
 We will exemplify this for the TAMM/not-TAMM classifier.
-* Both images should contain TAMM/not-TAMM point-annotations
-We now have two images with a few point annotations for training a combined TAMM/not-TAMM classifier. For this:
+* Both images should contain TAMM/not-TAMM point-annotations.
+
+We now have two images with a few point annotations for training a combined TAMM/not-TAMM classifier. For this:  
+
 * go to `Menu->Classify->Object classification->Train object classifier` 
 * as before select the features (all intensity measurements on `480`) and classes (TAMM/not-TAMM)
-* within the `Train object classifier` GUI press `Load training` and move both images from `Available` to `Selected` using the two arrows  , then `Apply`.
+* within the `Train object classifier` GUI press `Load training` and move both images from `Available` to `Selected` using the two arrows, then press `Apply`.
 * Save the classifier under the name `TAMM_combined`.
 
 ![](img/screenshot_train_loadTraining.png?raw=true "Screenshot")
