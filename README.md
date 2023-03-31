@@ -1,9 +1,9 @@
 # Cell segmentation, Classification and Spatial Analysis in Multiplexed Fluorescence Microscopy Image Data.
 ## Focus on Microscopy 2023
 ## April 2, 2023
-Trainer: Anna Klemm, BioImage Informatics Facility, SciLifeLab, Sweden  
-Authors: Fredrik Nysjö, Anna Klemm, BioImage Informatics Facility, SciLifeLab, Sweden  
-License:  
+**Trainer**: Anna Klemm, BioImage Informatics Facility, SciLifeLab, Sweden  
+**Authors material and data**: Anna Klemm, Fredrik Nysjö, Lina Wik, Arne Östman, Carolina Wählby  
+**License**: [BSD 3-Clause](LICENSE.md)  
 
 ## Schedule
 *April 2, 10:30 AM - 12:45 PM (2h 15min), Tutorial 1, Infante hall*
