@@ -12,7 +12,7 @@ Inspect image quality and staining intensities in the different channels in diff
 **Tools:**  
 We are using the BigDataViewer and BigDataViewer (BDV) Playground in Fiji.  
 Information BigDataViewer: https://imagej.net/plugins/bdv/  
-Information BDV Playground: https://github.com/bigdataviewer/bigdataviewer-playground  
+Information BDV Playground: [https://imagej.github.io/plugins/bdv/playground/bdv-playground](https://imagej.github.io/plugins/bdv/playground/bdv-playground)  
 Introduction to both: [NEUBIAS video](https://www.youtube.com/watch?v=LHI7vXiUUms)
 
 **Literature:**  
